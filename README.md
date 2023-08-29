@@ -10,5 +10,5 @@ python manage.py runserver
 Once it is running either click the link or go to the address in your web browser.
 
 If you would like to add a movie type /admin after the site address
-username is colin
-password is secret
+- username is colin
+- password is secret
