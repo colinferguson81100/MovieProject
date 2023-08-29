@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Colin's Favorite Movies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/minty/bootstrap.min.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary" id="mainNav">
+    <div class="site-heading">
+      <h3 class=" site-heading my-1 mt-3 text-white"> Colin's Favorite Movies </h3>
+      <p class="text-dark"> Click a movie to find more info about it.</p>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12 mt-4">
+        {% for movie in movies %}
+          <a href="{% url 'movie-detail' movie.pk %}" class="card mb-4 col-md-12">
+            <div class="card-body">
+              <h4 class="card-title">{{ movie.title }}</h2>
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<style>
+  .card:hover {
+    background-color: #f8f9fa; /* Change to your desired hover background color */
+    cursor: pointer;
+  }
+</style>
