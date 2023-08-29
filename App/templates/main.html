@@ -14,11 +14,11 @@
       <p class="text-dark"> Click a movie to find more info about it.</p>
     </div>
   </nav>
-  <div class="container">
+  <div class="ml-5 mr-5">
     <div class="row">
       <div class="col-xl-12 mt-4">
         {% for movie in movies %}
-          <a href="{% url 'movie-detail' movie.pk %}" class="card mb-4 col-md-12">
+          <a href="{% url 'movie-detail' movie.pk %}" class="card mb-4 col--12">
             <div class="card-body">
               <h4 class="card-title">{{ movie.title }}</h2>
             </div>
